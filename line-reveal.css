@@ -1,0 +1,8 @@
+/* Line-by-line reveal for the Belief and Code sections: slow, soft, one line after another as you scroll. */
+.js [data-lr]{opacity:0;transform:translateY(28px);filter:blur(5px);transition:opacity 1.5s var(--ease),transform 1.5s var(--ease),filter 1.5s var(--ease);transition-delay:calc(var(--i,0) * .5s);will-change:opacity,transform}
+.js [data-line-reveal].lr-on [data-lr]{opacity:1;transform:none;filter:none}
+.js [data-line-reveal].lr-done [data-lr]{will-change:auto;transition-delay:0s}
+.belief .belief-line{display:block}
+.js .code-grid li[data-lr]{transition:opacity 1.5s var(--ease),transform 1.5s var(--ease),filter 1.5s var(--ease),background .5s var(--ease);transition-delay:calc(var(--i,0) * .5s),calc(var(--i,0) * .5s),calc(var(--i,0) * .5s),0s}
+.js [data-line-reveal].lr-done .code-grid li[data-lr]{transition-delay:0s}
+@media(prefers-reduced-motion:reduce){.js [data-lr]{opacity:1;transform:none;filter:none}}

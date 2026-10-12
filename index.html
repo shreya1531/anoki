@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>Anokhi Diamond Atelier | Bespoke Diamond Jewellery in Bangalore</title>
+  <meta name="description" content="Explore personalised diamond jewellery, bespoke designs and custom engagement rings in Bangalore and beyond. Discover Anokhi Selections, story-led collections or make your Anokhi."/>
+  <meta property="og:title" content="Jewellery as unique as your story | Anokhi Diamond Atelier"/>
+  <meta property="og:description" content="A design-led diamond atelier for personal stories, thoughtful choices and jewellery crafted for you."/>
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="theme-color" content="#24032a"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=DM+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+  <link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link href="styles.css" rel="stylesheet"/>
+  <link href="squeeze-carousel.css" rel="stylesheet"/>
+  <link href="journey.css" rel="stylesheet"/>
+  <link href="simple-cards.css" rel="stylesheet"/>
+  <link href="line-reveal.css" rel="stylesheet"/>
+  <link href="home-extras.css" rel="stylesheet"/>
+  <link href="premium-details.css" rel="stylesheet"/>
+  <style>
+    @media(max-width:700px){.enquiry-form .form-row{grid-template-columns:1fr}}
+    .panel-title{white-space:normal;max-width:calc(100% - 48px);line-height:1.02}
+    .selection-detail{min-height:70vh}
+    .selection-detail h1{font:400 clamp(42px,6vw,72px)/1 var(--display);color:var(--plum);margin:22px 0}
+    .selection-detail-copy{color:var(--muted);max-width:700px;margin-bottom:35px}
+    .selection-gallery{display:flex;height:430px;gap:14px;overflow:hidden}
+    .selection-gallery figure{display:flex;flex-direction:column;flex:1;min-width:0;margin:0;overflow:hidden;background:var(--beige);transition:flex .8s var(--ease)}
+    .selection-gallery figure.active{flex:1.8}
+    .selection-gallery-item{position:relative;display:block;flex:1;min-height:0;width:100%;height:100%;padding:0;border:0;background:var(--deep);text-align:left;overflow:hidden}
+    .selection-gallery-item img{display:block;width:100%;height:100%;object-fit:cover;background:var(--deep);transition:transform 1s var(--ease)}
+    .selection-gallery-item:hover img{transform:scale(1.045)}
+    .selection-gallery figcaption{padding:10px 12px;color:var(--muted);font-size:9px;line-height:1.4;background:var(--beige)}
+    .selection-detail .image-note{max-width:800px;margin:24px 0}
+    .category-detail-actions{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:28px}
+    .story-image.far-next{transform:translate(42%,7%) rotate(18deg) scale(.72);z-index:1;opacity:.35}
+    .story-image.far-previous{transform:translate(-42%,7%) rotate(-18deg) scale(.72);z-index:1;opacity:.35}
+    .selection-detail-view .announcement,.selection-detail-view .header nav,.selection-detail-view .header .nav-cta,.selection-detail-view .header .menu-button,.selection-detail-view .footer{display:none!important}
+    .selection-detail-view #main>:not(#selection-detail){display:none!important}
+    .selection-detail-view .header{position:relative}
+    @media(max-width:1000px){.selection-gallery{height:350px;gap:10px}}
+    @media(max-width:700px){.selection-gallery{height:370px;gap:7px}.selection-gallery figure.active{flex:4}.selection-gallery figure:not(.active) figcaption{display:none}.selection-gallery figcaption{padding:8px;font-size:8px}.jewel-panel:not(.active) .panel-title{font-size:12px;white-space:nowrap;max-width:none}.story-image.far-next{transform:translate(43%,5%) rotate(16deg) scale(.68)}.story-image.far-previous{transform:translate(-43%,5%) rotate(-16deg) scale(.68)}}
+  </style>
+  <script defer src="script.js"></script>
+  <script defer src="line-reveal.js"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "JewelryStore",
+      "name": "Anokhi Diamond Atelier",
+      "description": "Personalised diamond jewellery, bespoke design and thoughtful craftsmanship.",
+      "areaServed": ["Bangalore", "India"],
+      "telephone": "+91 8792701308",
+      "sameAs": ["https://instagram.com/anokhi_diamond_atelier"]
+    }
+  </script>
+<script>document.documentElement.classList.add('js')</script></head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="announcement">RARE &amp; REAL <span>✧</span> DESIGNED AROUND YOU</div>
+  <header class="header">
+    <a aria-label="Anokhi Diamond Atelier home" class="wordmark" href="#home">
+      <img alt="Anokhi Diamond Atelier" height="70" src="assets/logo-plum.png" width="170"/>
+    </a>
+    <nav aria-label="Main navigation" id="navigation">
+      <a href="#selections">Anokhi Selections</a>
+      <a href="#stories">Collections</a>
+      <a href="#personalisation">Your Way</a>
+    </nav>
+    <a class="button button-outline nav-cta" href="#journey-form">Make Your Anokhi <span>↗</span></a>
+    <button aria-controls="navigation" aria-expanded="false" aria-label="Open menu" class="icon-button menu-button">☰</button>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <img alt="Diamond jewellery on rich plum velvet" class="hero-photo" fetchpriority="high" height="1024" src="assets/banner.jpg" width="1920"/>
+      <div class="hero-content">
+        <p class="eyebrow">A DIAMOND ATELIER. A WORLD OF YOU.</p>
+        <h1>Anokhi.<br/><em>Unmistakably you.</em></h1>
+        <p class="hero-description">Jewellery as unique as your story.<br/>Not an ideal to fit. A reflection of who you are.</p>
+        <a class="button button-filled" href="#selections">Find your Anokhi path <span>↗</span></a>
+        <a class="hero-secondary" href="#journey-form">Or, tell us what you’re imagining <span>→</span></a>
+      </div>
+      <div class="hero-bottom">
+        <span>FINE DIAMONDS. PERSONAL MEANING.</span>
+        <a href="#belief">SCROLL TO DISCOVER <span>↓</span></a>
+        <span>01 / THE BEGINNING</span>
+      </div>
+    </section>
+
+    <div class="values-band">
+      <span>Individuality</span><i>✧</i><span>Personalisation</span><i>✧</i>
+      <span>Considered craftsmanship</span><i>✧</i><span>Rare &amp; Real</span>
+      <i>✧</i><span>Designed around you</span>
+    </div>
+
+    <section class="belief section" id="belief" data-line-reveal>
+      <p class="eyebrow" data-lr style="--i:0">THE ANOKHI BELIEF</p>
+      <h2><span class="belief-line" data-lr style="--i:1">Not what she should wear.</span><span class="belief-line" data-lr style="--i:2">Who she <em>already is.</em></span></h2>
+      <p><span class="belief-line" data-lr style="--i:3">Some pieces are worn. Others become a part of you.</span><span class="belief-line" data-lr style="--i:4">We believe the most beautiful jewellery begins with individuality.</span></p>
+      <span aria-hidden="true" class="small-diamond" data-lr style="--i:5">◇</span>
+      <figure class="belief-jewel" data-lr style="--i:6"><img src="assets/selection-ring.jpg" width="634" height="634" alt="A solitaire diamond held in warm gold, on velvet" loading="lazy"/></figure>
+    </section>
+
+    <section class="anokhi-code" id="code" data-line-reveal aria-labelledby="code-title">
+      <div class="code-head">
+        <p class="eyebrow" data-lr style="--i:0">THE ANOKHI CODE</p>
+        <h3 id="code-title" data-lr style="--i:1">Six letters. <em>One way of seeing.</em></h3>
+        <p data-lr style="--i:2">Anokhi means <em>unique</em>. Every piece we design begins with these six ideas.</p>
+      </div>
+      <div class="code-facet" aria-hidden="true" data-lr style="--i:3"><img src="assets/diamond-study.jpg" width="1024" height="1024" alt="" loading="lazy"/></div>
+      <ol class="code-grid">
+        <li data-lr style="--i:4"><b>A</b><h4>Authentic</h4><span>Self-expression</span></li>
+        <li data-lr style="--i:5"><b>N</b><h4>Nuance</h4><span>The details that whisper</span></li>
+        <li data-lr style="--i:6"><b>O</b><h4>Originality</h4><span>Never one of many</span></li>
+        <li data-lr style="--i:7"><b>K</b><h4>Knowledge</h4><span>Informed, confident choices</span></li>
+        <li data-lr style="--i:8"><b>H</b><h4>Her Choice</h4><span>Always, entirely hers</span></li>
+        <li data-lr style="--i:9"><b>I</b><h4>Individuality</h4><span>Rare &amp; real</span></li>
+      </ol>
+      <div class="code-vision" data-lr style="--i:11">
+        <span aria-hidden="true">✧</span>
+        <p>A community where jewellery becomes a language of individuality, where every person feels seen, understood and celebrated for what makes them <em>rare and real.</em></p>
+      </div>
+    </section>
+
+    <section class="section selections" id="selections">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow">01 / THE SELECTIONS</p><h2>A little brilliance.<br/><em>A lot of you.</em></h2></div>
+        <div class="section-aside">
+          <p>Timeless forms. Thoughtful details.<br/>Find the piece that feels like your own.</p>
+          <div class="gallery-controls">
+            <span id="selection-count">01 / 05</span>
+            <button aria-label="Previous jewellery selection" class="icon-button" id="selection-prev">←</button>
+            <button aria-label="Next jewellery selection" class="icon-button" id="selection-next">→</button>
+          </div>
+        </div>
+      </div>
+      <div class="reveal" id="selection-carousel" aria-label="Anokhi jewellery categories"></div>
+      <div aria-hidden="true" class="squeeze-gallery" hidden></div>
+      <div class="selection-description">
+        <p aria-live="polite"><strong id="selection-title">Pendant + Chain</strong> <span id="selection-description">Pendant-and-chain designs, considered as a complete composition.</span></p>
+        <a class="text-link" href="#journey-form" id="selection-enquiry">Make it yours <span>↗</span></a>
+      </div>
+      <p class="image-note">Illustrative design imagery. Category panels open a five-image gallery; ask Anokhi to confirm available pieces and approved product views.</p>
+    </section>
+
+    <section aria-labelledby="selection-detail-title" class="section selection-detail" hidden id="selection-detail">
+      <a class="text-link" href="index.html#selections">← Back to Anokhi Selections</a>
+      <p class="eyebrow" id="selection-detail-eyebrow">ANOKHI SELECTIONS / CATEGORY</p>
+      <h1 id="selection-detail-title">Explore the collection</h1>
+      <p class="selection-detail-copy" id="selection-detail-copy"></p>
+      <div class="gallery-controls selection-gallery-controls">
+        <span id="selection-image-count">01 / 05</span>
+        <button aria-label="Previous category image" class="icon-button" id="selection-image-prev">←</button>
+        <button aria-label="Next category image" class="icon-button" id="selection-image-next">→</button>
+      </div>
+      <div aria-label="Five illustrative category images" class="selection-gallery" id="selection-gallery"></div>
+    </section>
+
+    <section class="stories section" id="stories">
+      <div class="story-intro reveal">
+        <div><p class="eyebrow">02 / ANOKHI COLLECTIONS</p><h2>Inspired by the world.<br/><em>Made personal.</em></h2></div>
+        <p>A bloom. A feather. A memory etched in stone.<br/>Every design begins with something that moves us.</p>
+      </div>
+      <div class="collection-cards reveal">
+        <a aria-label="Read Rose to Radiance" class="collection-card" href="rose.html"><img alt="Crimson rose with velvet petals and dew drops" loading="lazy" src="assets/rose.jpg"/><span class="collection-card-text"><i>CHAPTER 01 / THE BLOOM</i><b>Rose to Radiance</b><em>Explore this story <u>↗</u></em></span></a>
+        <a aria-label="Read Mayura" class="collection-card" href="mayura.html"><img alt="Emerald, teal and gold peacock feather" loading="lazy" src="assets/peacock.jpg"/><span class="collection-card-text"><i>CHAPTER 02 / THE FEATHER</i><b>Mayura</b><em>Explore this story <u>↗</u></em></span></a>
+        <a aria-label="Read Temple to Treasure" class="collection-card" href="temple.html"><img alt="Intricately carved South Indian temple at sunrise" loading="lazy" src="assets/temple.jpg"/><span class="collection-card-text"><i>CHAPTER 03 / THE HERITAGE</i><b>Temple to Treasure</b><em>Explore this story <u>↗</u></em></span></a>
+        <a aria-label="Read Full Moon" class="collection-card" href="moonlight.html"><img alt="A luminous full moon above moonlit clouds and a silver lake" loading="lazy" src="assets/moonlight-card.jpg"/><span class="collection-card-text"><i>CHAPTER 04 / FULL MOON</i><b>Full Moon</b><em>Explore this story <u>↗</u></em></span></a>
+        <a aria-label="Read See" class="collection-card" href="see.html"><img alt="Rolling ocean waves in the Anokhi plum twilight palette" loading="lazy" src="assets/sea-waves.jpg"/><span class="collection-card-text"><i>CHAPTER 05 / THE SEA</i><b>See</b><em>Explore this story <u>↗</u></em></span></a>
+      </div>
+      <p class="image-note">Creative inspiration, not ready-stock product designs.</p>
+    </section>
+
+    <section class="journey" id="personalisation" aria-labelledby="journey-title">
+      <div class="journey-intro">
+        <div class="journey-photo reveal">
+          <img alt="Jeweller setting a diamond by hand beside a ring design sketch" height="1024" loading="lazy" src="assets/craft.jpg" width="1024"/>
+          <span>THE ART OF MAKING IT YOURS</span>
+        </div>
+        <div class="journey-copy reveal" id="craft">
+          <p class="eyebrow">03 / JOURNEY 3 — ANOKHI, YOUR WAY</p>
+          <h2 id="journey-title">Not found yet?<br/><em>Then let’s make it.</em></h2>
+          <p>For the one who wants it entirely hers, or entirely his. Perhaps you know exactly what you want, perhaps you only know how it should feel. Either way, your story guides the proportions, the stone and every small detail.</p>
+          <p>Begin with a few gentle questions. A member of the atelier will read every answer and speak to you the way you prefer, with no pressure and no script.</p>
+          <div class="craft-signature">Designed by Anokhi,<br/>crafted for you.</div>
+          <div class="journey-actions">
+            <a class="button button-filled" href="#journey-form">Make Your Anokhi <span>↗</span></a>
+            <a class="text-link" href="#journey-form">Tell Us Your Story <span>↓</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="journey-modal" id="journey-modal" hidden>
+        <div class="journey-modal-panel" role="dialog" aria-modal="true" aria-label="Make Your Anokhi" tabindex="-1">
+          <button aria-label="Close" class="journey-close" id="journey-close" type="button">×</button>
+          <form class="journey-form" id="journey-form" novalidate aria-label="Make Your Anokhi">
+        <header class="jf-head">
+          <p class="eyebrow">TELL US A LITTLE ABOUT WHAT YOU’RE IMAGINING…</p>
+          <ol class="jf-progress" aria-hidden="true"><li class="on"></li><li></li><li></li><li></li></ol>
+          <p class="jf-step-label" id="jf-step-label" aria-live="polite">Step 1 of 4</p>
+        </header>
+
+        <fieldset class="jf-step" data-step="1">
+          <legend>What are you looking for?</legend>
+          <p class="jf-hint">Choose whatever feels closest. There are no wrong answers.</p>
+          <div class="jf-group"><p class="jf-q">Which category are you exploring?</p>
+            <div class="chips" role="radiogroup">
+              <label class="chip"><input type="radio" name="category" value="Ring"/><span>Ring</span></label>
+              <label class="chip"><input type="radio" name="category" value="Earrings"/><span>Earrings</span></label>
+              <label class="chip"><input type="radio" name="category" value="Necklace"/><span>Necklace</span></label>
+              <label class="chip"><input type="radio" name="category" value="Pendant"/><span>Pendant</span></label>
+              <label class="chip"><input type="radio" name="category" value="Bracelet"/><span>Bracelet</span></label>
+              <label class="chip"><input type="radio" name="category" value="Bangle"/><span>Bangle</span></label>
+              <label class="chip"><input type="radio" name="category" value="Mangalsutra"/><span>Mangalsutra</span></label>
+              <label class="chip"><input type="radio" name="category" value="Other"/><span>Other</span></label>
+            </div></div>
+          <div class="jf-group"><p class="jf-q">What is the occasion?</p>
+            <div class="chips" role="radiogroup">
+              <label class="chip"><input type="radio" name="occasion" value="Self"/><span>Self</span></label>
+              <label class="chip"><input type="radio" name="occasion" value="Engagement"/><span>Engagement</span></label>
+              <label class="chip"><input type="radio" name="occasion" value="Wedding"/><span>Wedding</span></label>
+              <label class="chip"><input type="radio" name="occasion" value="Anniversary"/><span>Anniversary</span></label>
+              <label class="chip"><input type="radio" name="occasion" value="Birthday"/><span>Birthday</span></label>
+              <label class="chip"><input type="radio" name="occasion" value="Gifting"/><span>Gifting</span></label>
+              <label class="chip"><input type="radio" name="occasion" value="Milestone"/><span>Milestone</span></label>
+              <label class="chip"><input type="radio" name="occasion" value="Just Because"/><span>Just Because</span></label>
+              <label class="chip"><input type="radio" name="occasion" value="Other"/><span>Other</span></label>
+            </div></div>
+          <div class="jf-group"><p class="jf-q">What style speaks to you?</p>
+            <div class="chips" role="radiogroup">
+              <label class="chip"><input type="radio" name="style" value="Minimal"/><span>Minimal</span></label>
+              <label class="chip"><input type="radio" name="style" value="Classic"/><span>Classic</span></label>
+              <label class="chip"><input type="radio" name="style" value="Statement"/><span>Statement</span></label>
+              <label class="chip"><input type="radio" name="style" value="Contemporary"/><span>Contemporary</span></label>
+              <label class="chip"><input type="radio" name="style" value="Personalised"/><span>Personalised</span></label>
+              <label class="chip"><input type="radio" name="style" value="Unsure"/><span>Unsure</span></label>
+            </div></div>
+        </fieldset>
+
+        <fieldset class="jf-step" data-step="2">
+          <legend>The stones, and the story</legend>
+          <p class="jf-hint">Everything here is optional. Share only what you’d like to.</p>
+          <div class="jf-group"><p class="jf-q">Diamond preference</p>
+            <div class="chips" role="radiogroup">
+              <label class="chip"><input type="radio" name="diamond" value="Natural"/><span>Natural</span></label>
+              <label class="chip"><input type="radio" name="diamond" value="Grown"/><span>Grown</span></label>
+              <label class="chip"><input type="radio" name="diamond" value="Open to guidance"/><span>Open to guidance</span></label>
+            </div></div>
+          <div class="jf-row">
+            <label>Gemstone preference (optional)
+              <select name="gemstone"><option value="">No preference yet</option><option>Ruby</option><option>Emerald</option><option>Sapphire</option><option>Amethyst</option><option>Citrine</option><option>Garnet</option><option>Peridot</option><option>Topaz</option><option>Aquamarine</option><option>Tourmaline</option><option>Tanzanite</option><option>Moonstone</option><option>Pearl</option><option>Coral</option><option>Opal</option><option>Turquoise</option><option>Lapis Lazuli</option><option>Spinel</option><option>Zircon</option><option>Other</option></select>
+            </label>
+            <label>Approximate budget (optional)
+              <input maxlength="120" name="budget" placeholder="A range is enough, or ‘prefer to discuss’"/>
+            </label>
+          </div>
+          <label>Tell us your story (optional)
+            <textarea maxlength="1200" name="story" placeholder="A feeling, a first idea, a moment worth holding…" rows="4"></textarea>
+          </label>
+        </fieldset>
+
+        <fieldset class="jf-step" data-step="3">
+          <legend>When, and how shall we talk?</legend>
+          <p class="jf-hint">So the atelier can plan your piece and reach you the way you like.</p>
+          <label>When do you need it?
+            <select name="timeline"><option>Flexible</option><option>As soon as possible</option><option>Within 1 month</option><option>1–3 months</option><option>3–6 months</option><option>More than 6 months</option></select>
+          </label>
+          <div class="jf-group"><p class="jf-q">How would you like to speak to us?</p>
+            <div class="chips" role="radiogroup">
+              <label class="chip"><input type="radio" name="consultation" value="WhatsApp" checked/><span>WhatsApp</span></label>
+              <label class="chip"><input type="radio" name="consultation" value="Phone"/><span>Phone</span></label>
+              <label class="chip"><input type="radio" name="consultation" value="Video"/><span>Video</span></label>
+              <label class="chip"><input type="radio" name="consultation" value="In-person (Bangalore or Mysore)"/><span>In-person</span></label>
+            </div></div>
+        </fieldset>
+
+        <fieldset class="jf-step" data-step="4">
+          <legend>And where do we find you?</legend>
+          <p class="jf-hint">Only so we can reply personally. Nothing is stored on this page.</p>
+          <div class="jf-row">
+            <label>Your name<input autocomplete="name" maxlength="100" name="name" placeholder="Your name" required/></label>
+            <label>Phone / WhatsApp<input autocomplete="tel" maxlength="30" name="phone" placeholder="+91" required type="tel"/></label>
+          </div>
+          <label>Email (optional)<input autocomplete="email" maxlength="200" name="email" placeholder="you@example.com" type="email"/></label>
+          <label>Anything else we should know? (optional)
+            <textarea maxlength="1200" name="extra" placeholder="Personal context, preferences, questions…" rows="3"></textarea>
+          </label>
+        </fieldset>
+
+        <div class="jf-nav">
+          <button class="button button-outline" id="jf-back" type="button" hidden>← Back</button>
+          <button class="button button-filled" id="jf-next" type="button">Continue <span>→</span></button>
+          <button class="button button-filled" id="jf-submit" type="submit" hidden>Make Your Anokhi <span>↗</span></button>
+        </div>
+        <p class="form-note">Your answers are placed in a WhatsApp message for you to review and send. In-person consultations are available in Bangalore and Mysore.</p>
+        <p id="form-status" role="status"></p>
+        <a class="text-link" hidden id="send-enquiry" rel="noopener" target="_blank">Open your enquiry in WhatsApp ↗</a>
+      </form>
+        </div>
+      </div>
+    </section>
+
+                <section class="atelier-process" id="process" aria-labelledby="process-title">
+      <div class="process-head reveal">
+        <p class="eyebrow">AFTER YOU BEGIN</p>
+        <h2 id="process-title">Crafted for you,<br/><em>step by step.</em></h2>
+        <p>From the first conversation to the day it reaches you, you always know where your piece is. Typical crafting time is 15 days.</p>
+      </div>
+      <ol class="process-steps">
+        <li class="reveal"><b>01</b><h4>Begin</h4><p>You pay the advance and your piece is initiated.</p></li>
+        <li class="reveal"><b>02</b><h4>CAD proof</h4><p>Your design is shared for approval, confirmed by email.</p></li>
+        <li class="reveal"><b>03</b><h4>Crafted</h4><p>Your approved design is crafted by hand.</p></li>
+        <li class="reveal"><b>04</b><h4>Ready</h4><p>We tell you the moment it is ready to dispatch.</p></li>
+        <li class="reveal"><b>05</b><h4>Balance</h4><p>A secure link to clear the balance is sent to you.</p></li>
+        <li class="reveal"><b>06</b><h4>Delivered</h4><p>Your piece arrives, ready to be worn and loved.</p></li>
+      </ol>
+      <div class="consult-card reveal">
+        <div>
+          <p class="eyebrow">THE CONSULTATION</p>
+          <h3>Prefer to talk it through?</h3>
+          <p>Speak to the atelier on WhatsApp, phone or video, or meet in person in Bangalore or Mysore.</p>
+        </div>
+        <ul>
+          <li><span>Consultation</span><b>₹1,000</b></li>
+          <li><span>Adjustable against</span><b>your final order</b></li>
+          <li><span>In person</span><b>Bangalore · Mysore</b></li>
+        </ul>
+        <a class="button button-outline" href="#journey-form">Book a conversation <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="diamond-origins-section" id="diamonds" aria-labelledby="origins-title">
+      <div class="origins-head reveal">
+        <p class="eyebrow">THE DIAMOND JOURNEY</p>
+        <h2 id="origins-title">Different origins.<br/><em>Same diamond.</em></h2>
+        <p>Anokhi offers natural and grown diamonds as choices. Whichever you choose, you are choosing the same pure carbon crystal.</p>
+      </div>
+      <div class="origins-grid">
+        <article class="reveal"><div class="origin-jewel"><img src="assets/diamond-study.jpg" width="1024" height="1024" alt="Brilliant-cut diamond on burgundy velvet" loading="lazy"/></div><span>01</span><h4>Mined</h4><p>Formed deep within the earth.</p></article>
+        <article class="reveal"><div class="origin-jewel"><img src="assets/diamond-study.jpg" width="1024" height="1024" alt="Brilliant-cut diamond on burgundy velvet" loading="lazy"/></div><span>02</span><h4>HPHT</h4><p>Forged under pressure.</p></article>
+        <article class="reveal"><div class="origin-jewel"><img src="assets/diamond-study.jpg" width="1024" height="1024" alt="Brilliant-cut diamond on burgundy velvet" loading="lazy"/></div><span>03</span><h4>CVD</h4><p>Built layer by layer.</p></article>
+      </div>
+      <p class="origins-common reveal"><i>✧</i> Pure carbon crystal · 10/10 Mohs hardness · The same physical, chemical and optical properties</p>
+    </section>
+
+    <section class="trust-band" id="trust" aria-label="Certification and policies">
+      <div class="trust-seal" aria-hidden="true">✧</div>
+      <div class="trust-grid">
+        <div class="reveal"><b>BIS</b><h4>Hallmarked 18K gold</h4><p>Gold you can trust, certified.</p></div>
+        <div class="reveal"><b>IGI</b><h4>Certified diamonds</h4><p>Every diamond, regardless of carat.</p></div>
+        <div class="reveal"><b>80%</b><h4>Lifetime buyback</h4><p>Plus lifetime exchange on your piece.</p></div>
+        <div class="reveal"><b>100%</b><h4>Value on exchange</h4><p>Of diamonds, whatever their origin.</p></div>
+      </div>
+    </section>
+
+<section class="section founder reveal" id="founder">
+      <div class="founder-jewel"><img src="assets/selection-ring.jpg" width="634" height="634" alt="A personal expression in gold and diamond" loading="lazy"/></div>
+      <p class="eyebrow">THE PERSON BEHIND THE PIECE</p>
+      <h2>“The brilliance remains.<br/><em>The choice is yours.</em>”</h2>
+      <p>Shifa Khanum <span>— FOUNDER &amp; CREATIVE DIRECTOR</span></p>
+      <p class="founder-description">Design thinking, diamond education and honest conversations.<br/>A personal approach to a deeply personal piece.</p>
+    </section>
+
+    
+
+    <section class="section faq reveal" id="faq">
+      <div class="clarity-jewel" aria-hidden="true"><img src="assets/diamond-study.jpg" width="1024" height="1024" alt="" loading="lazy"/></div>
+      <p class="eyebrow">THE ANOKHI EDIT</p>
+      <h2>A little more <em>clarity.</em></h2>
+      <div class="faq-list">
+        <details><summary>Are natural and grown diamonds real diamonds?<span>+</span></summary><p>Yes. Both share the defining physical, chemical and optical properties of diamond. Their origins differ, and individual grading and certification remain important.</p></details>
+        <details><summary>Can I request a personalised design?<span>+</span></summary><p>Yes. Start with the guided form above. Share your category, occasion, style, diamond preference, approximate budget and timeline, and the atelier can help shape a design direction around your story.</p></details>
+        <details><summary>What happens after I approve a design?<span>+</span></summary><p>Anokhi shares the CAD or design proof for your approval and confirms approval by email. Your piece is then crafted for you, typically in 15 days. You receive a ready-to-dispatch update and a secure balance-payment link before delivery.</p></details>
+        <details><summary>How are specifications and price confirmed?<span>+</span></summary><p>Ask for a current quote before you decide. It should confirm the product specifications, key price components, any applicable discount and tax, and the final amount. The website's design imagery is illustrative.</p></details>
+        <details><summary>What are Anokhi's buyback and exchange policies?<span>+</span></summary><p>Anokhi offers lifetime buyback at 80% value and 100% value on exchange of diamonds, irrespective of diamond type, as per brand policy. Ask the atelier to confirm the terms for your piece.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <a aria-label="Anokhi Diamond Atelier home" class="wordmark" href="#home"><img alt="Anokhi Diamond Atelier" height="70" src="assets/logo-gold.png" width="170"/></a>
+      <h2>A story only you can tell.<br/><em>A piece only you can wear.</em></h2>
+      <a class="button button-outline" href="#journey-form">Let’s begin <span>↗</span></a>
+    </div>
+    <div class="footer-links">
+      <span>BANGALORE &amp; BEYOND</span>
+      <a href="https://instagram.com/anokhi_diamond_atelier" rel="noopener" target="_blank">Instagram ↗</a>
+      <a href="https://wa.me/918792701308" rel="noopener" target="_blank">WhatsApp ↗</a>
+      <a href="tel:+918792701308">+91 8792701308</a>
+      <a href="#faq">FAQs &amp; policies</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ANOKHI DIAMOND ATELIER</span><span>RARE &amp; REAL. ALWAYS YOU.</span><a href="#home">BACK TO TOP ↑</a>
+    </div>
+  </footer>
+  <script src="squeeze-carousel.js"></script>
+  <script>
+    const categoryPicture = (src, alt, caption) => ({src, alt, caption});
+    const categoryGalleries = {"pendant-chain": {"title": "Pendant + Chain", "description": "Pendant-and-chain compositions with a considered balance of proportion and light.", "images": [{"src": "assets/design-pendant-chain-1.jpg", "hover": "assets/design-pendant-chain-1-b.jpg", "alt": "Solitaire Charm — Pendant + Chain", "caption": "Solitaire Charm", "price": "28,500"}, {"src": "assets/design-pendant-chain-2.jpg", "hover": "assets/design-pendant-chain-2-b.jpg", "alt": "Floral Cluster — Pendant + Chain", "caption": "Floral Cluster", "price": "34,900"}, {"src": "assets/design-pendant-chain-3.jpg", "hover": "assets/design-pendant-chain-3-b.jpg", "alt": "Emerald Drop — Pendant + Chain", "caption": "Emerald Drop", "price": "46,500"}, {"src": "assets/design-pendant-chain-4.jpg", "hover": "assets/design-pendant-chain-4-b.jpg", "alt": "Infinity — Pendant + Chain", "caption": "Infinity", "price": "39,900"}, {"src": "assets/design-pendant-chain-5.jpg", "hover": "assets/design-pendant-chain-5-b.jpg", "alt": "Halo Pendant — Pendant + Chain", "caption": "Halo Pendant", "price": "42,500"}]}, "minimal-necklace": {"title": "Minimal Necklace / Mangalsutra", "description": "Minimal necklaces and mangalsutra designs, with the details kept personal.", "images": [{"src": "assets/design-minimal-necklace-1.jpg", "hover": "assets/design-minimal-necklace-1-b.jpg", "alt": "Classic Solitaire — Minimal Necklace / Mangalsutra", "caption": "Classic Solitaire", "price": "32,500"}, {"src": "assets/design-minimal-necklace-2.jpg", "hover": "assets/design-minimal-necklace-2-b.jpg", "alt": "Floral Motif — Minimal Necklace / Mangalsutra", "caption": "Floral Motif", "price": "38,500"}, {"src": "assets/design-minimal-necklace-3.jpg", "hover": "assets/design-minimal-necklace-3-b.jpg", "alt": "Infinity Design — Minimal Necklace / Mangalsutra", "caption": "Infinity Design", "price": "41,500"}, {"src": "assets/design-minimal-necklace-4.jpg", "hover": "assets/design-minimal-necklace-4-b.jpg", "alt": "Geometric Pendant — Minimal Necklace / Mangalsutra", "caption": "Geometric Pendant", "price": "44,900"}, {"src": "assets/design-minimal-necklace-5.jpg", "hover": "assets/design-minimal-necklace-5-b.jpg", "alt": "Modern V Design — Minimal Necklace / Mangalsutra", "caption": "Modern V Design", "price": "36,500"}]}, "heavier-necklace": {"title": "Heavier Necklace", "description": "Statement necklaces, composed around symmetry, stone and sculptural detail.", "images": [{"src": "assets/design-heavier-necklace-1.jpg", "hover": "assets/design-heavier-necklace-1-b.jpg", "alt": "Emerald Floral Choker — Heavier Necklace", "caption": "Emerald Floral Choker", "price": "2,85,000"}, {"src": "assets/design-heavier-necklace-2.jpg", "hover": "assets/design-heavier-necklace-2-b.jpg", "alt": "Ruby Heritage — Heavier Necklace", "caption": "Ruby Heritage", "price": "3,45,000"}, {"src": "assets/design-heavier-necklace-3.jpg", "hover": "assets/design-heavier-necklace-3-b.jpg", "alt": "Temple Inspired — Heavier Necklace", "caption": "Temple Inspired", "price": "3,15,000"}, {"src": "assets/design-heavier-necklace-4.jpg", "hover": "assets/design-heavier-necklace-4-b.jpg", "alt": "Pearl Layered Choker — Heavier Necklace", "caption": "Pearl Layered Choker", "price": "2,65,000"}, {"src": "assets/design-heavier-necklace-5.jpg", "hover": "assets/design-heavier-necklace-5-b.jpg", "alt": "Leaf Statement — Heavier Necklace", "caption": "Leaf Statement", "price": "2,25,000"}]}, "earrings": {"title": "Studs & / or Earrings", "description": "Studs and drop earrings, with beautiful balance and light in movement.", "images": [{"src": "assets/design-earrings-1.jpg", "hover": "assets/design-earrings-1-b.jpg", "alt": "Solitaire Studs — Studs & / or Earrings", "caption": "Solitaire Studs", "price": "24,500"}, {"src": "assets/design-earrings-2.jpg", "hover": "assets/design-earrings-2-b.jpg", "alt": "Floral Studs — Studs & / or Earrings", "caption": "Floral Studs", "price": "29,900"}, {"src": "assets/design-earrings-3.jpg", "hover": "assets/design-earrings-3-b.jpg", "alt": "Emerald Drops — Studs & / or Earrings", "caption": "Emerald Drops", "price": "62,500"}, {"src": "assets/design-earrings-4.jpg", "hover": "assets/design-earrings-4-b.jpg", "alt": "Pearl Jhumkas — Studs & / or Earrings", "caption": "Pearl Jhumkas", "price": "54,900"}, {"src": "assets/design-earrings-5.jpg", "hover": "assets/design-earrings-5-b.jpg", "alt": "Leaf Drops — Studs & / or Earrings", "caption": "Leaf Drops", "price": "38,500"}]}, "bracelet": {"title": "Bracelet", "description": "Bracelet silhouettes, with the setting and every small detail in focus.", "images": [{"src": "assets/design-bracelet-1.jpg", "hover": "assets/design-bracelet-1-b.jpg", "alt": "Solitaire Chain — Bracelet", "caption": "Solitaire Chain", "price": "34,500"}, {"src": "assets/design-bracelet-2.jpg", "hover": "assets/design-bracelet-2-b.jpg", "alt": "Tennis Bracelet — Bracelet", "caption": "Tennis Bracelet", "price": "78,500"}, {"src": "assets/design-bracelet-3.jpg", "hover": "assets/design-bracelet-3-b.jpg", "alt": "Emerald Line — Bracelet", "caption": "Emerald Line", "price": "96,500"}, {"src": "assets/design-bracelet-4.jpg", "hover": "assets/design-bracelet-4-b.jpg", "alt": "Infinity Bracelet — Bracelet", "caption": "Infinity Bracelet", "price": "41,900"}, {"src": "assets/design-bracelet-5.jpg", "hover": "assets/design-bracelet-5-b.jpg", "alt": "Floral Bracelet — Bracelet", "caption": "Floral Bracelet", "price": "49,500"}]}};
+
+    const selectionOrder = ['pendant-chain','minimal-necklace','heavier-necklace','earrings','bracelet'];
+
+    function categoryIllustration(kind, view) {
+      const artwork = {
+        ring: [
+          '<path d="M300 690 C350 950 650 950 700 690" fill="none" stroke="#D8C2A8" stroke-width="48"/><path d="M300 690 C350 950 650 950 700 690" fill="none" stroke="#F8F3ED" stroke-width="9"/><path d="M500 375 L585 510 L500 600 L415 510 Z" fill="#C8A5AE" stroke="#D8C2A8" stroke-width="12"/>',
+          '<path d="M270 700 C330 930 670 930 730 700" fill="none" stroke="#D8C2A8" stroke-width="34"/><path d="M500 400 L610 520 L500 625 L390 520 Z" fill="#EDE3D7" stroke="#D8C2A8" stroke-width="13"/><circle cx="500" cy="520" r="34" fill="#C8A5AE"/>'
+        ],
+        necklace: [
+          '<path d="M245 330 C260 760 740 760 755 330" fill="none" stroke="#D8C2A8" stroke-width="18"/><path d="M430 650 L500 735 L570 650 L500 565 Z" fill="#C8A5AE" stroke="#D8C2A8" stroke-width="10"/><circle cx="500" cy="650" r="22" fill="#F8F3ED"/>',
+          '<path d="M230 300 C270 810 730 810 770 300" fill="none" stroke="#D8C2A8" stroke-width="12"/><circle cx="500" cy="730" r="62" fill="none" stroke="#C8A5AE" stroke-width="14"/><path d="M500 625 L540 700 L500 765 L460 700 Z" fill="#D8C2A8"/>'
+        ],
+        bracelet: [
+          '<ellipse cx="500" cy="600" rx="290" ry="170" fill="none" stroke="#D8C2A8" stroke-width="36" transform="rotate(-15 500 600)"/><ellipse cx="500" cy="600" rx="245" ry="128" fill="none" stroke="#F8F3ED" stroke-width="6" transform="rotate(-15 500 600)"/><path d="M480 370 L520 370 L550 420 L500 465 L450 420 Z" fill="#C8A5AE" stroke="#D8C2A8" stroke-width="10"/>',
+          '<path d="M180 660 C330 510 670 510 820 660" fill="none" stroke="#D8C2A8" stroke-width="30" stroke-linecap="round"/><path d="M180 715 C330 565 670 565 820 715" fill="none" stroke="#F8F3ED" stroke-width="8" stroke-linecap="round"/><circle cx="320" cy="585" r="27" fill="#C8A5AE" stroke="#D8C2A8" stroke-width="8"/><circle cx="500" cy="550" r="38" fill="#EDE3D7" stroke="#D8C2A8" stroke-width="10"/><circle cx="680" cy="585" r="27" fill="#C8A5AE" stroke="#D8C2A8" stroke-width="8"/>'
+        ]
+      };
+      const shape = (artwork[kind] || artwork.bracelet)[view % 2];
+      const label = kind === 'bracelet' ? 'BRACELET DESIGN STUDY' : kind === 'ring' ? 'RING DESIGN STUDY' : 'NECKLACE DESIGN STUDY';
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200"><defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#370540"/><stop offset="1" stop-color="#24032A"/></linearGradient></defs><rect width="1000" height="1200" fill="url(#bg)"/><circle cx="500" cy="600" r="380" fill="none" stroke="#ffffff" stroke-opacity=".07"/><circle cx="500" cy="600" r="300" fill="none" stroke="#ffffff" stroke-opacity=".05"/>${shape}<text x="500" y="1035" text-anchor="middle" fill="#D8C2A8" font-family="Georgia,serif" font-size="31" letter-spacing="4">${label}</text><text x="500" y="1080" text-anchor="middle" fill="#F8F3ED" font-family="Arial,sans-serif" font-size="17" letter-spacing="2">ILLUSTRATIVE · NOT APPROVED CAD</text></svg>`;
+      return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+    }
+
+    // Selections: squeeze carousel
+    const selectionMeta = [
+      {slug:'pendant-chain',number:'01',category:'NECKLACE CATEGORY',form:'Pendant',image:'assets/selection-pendant.jpg',imageAlt:'Pear-shaped diamond pendant and gold chain on burgundy velvet',summary:'Pendant-and-chain designs, considered as a complete composition.'},
+      {slug:'minimal-necklace',number:'02',category:'MINIMAL / MANGALSUTRA',form:'Mangalsutra',image:'assets/selection-minimal.jpg',imageAlt:'Minimal pendant and fine chain against Anokhi plum velvet',summary:'Minimal necklace and mangalsutra designs with personal details.'},
+      {slug:'heavier-necklace',number:'03',category:'STATEMENT NECKLACE',form:'Necklace',image:'assets/selection-statement.jpg',imageAlt:'Statement gold and diamond necklace with ruby droplets on velvet',summary:'Heavier necklace silhouettes, symmetry and stone detail.'},
+      {slug:'earrings',number:'04',category:'STUDS / EARRINGS',form:'Earrings',image:'assets/selection-earrings.jpg',imageAlt:'Diamond studs and drop earrings on plum velvet',summary:'Studs and earrings, with the form and setting in focus.'},
+      {slug:'bracelet',number:'05',category:'BRACELET',form:'Bracelet',image:'assets/selection-bracelet.jpg',imageAlt:'Diamond tennis bracelet on burgundy velvet',summary:'Bracelet forms, silhouettes and detail.'}
+    ].map(item => ({...item,title:categoryGalleries[item.slug].title}));
+    let activeSelection = 0;
+    const selectionCarousel = createSqueezeCarousel(document.querySelector('#selection-carousel'), {
+      slides: selectionMeta,
+      label: 'Anokhi jewellery categories',
+      onIndexChange(index) {
+        activeSelection = index;
+        document.querySelector('#selection-count').textContent = `${String(index + 1).padStart(2,'0')} / 05`;
+        document.querySelector('#selection-title').textContent = selectionMeta[index].title;
+        document.querySelector('#selection-description').textContent = selectionMeta[index].summary;
+      },
+      onOpen(index) { window.open(`index.html?category=${selectionMeta[index].slug}`,'_blank','noopener,noreferrer'); }
+    });
+    document.querySelector('#selection-prev').addEventListener('click',event => { event.stopImmediatePropagation(); selectionCarousel.prev(); });
+    document.querySelector('#selection-next').addEventListener('click',event => { event.stopImmediatePropagation(); selectionCarousel.next(); });
+    document.querySelector('#selection-enquiry').addEventListener('click',event => {
+      event.stopImmediatePropagation();
+      const chip = document.querySelector(`#journey-form [name="category"][value="${selectionMeta[activeSelection].form}"]`);
+      if (chip) chip.checked = true;
+    });
+
+    // Journey 3: conversational, stepped form
+    (function () {
+      const form = document.querySelector('#journey-form');
+      const steps = Array.from(form.querySelectorAll('.jf-step'));
+      const dots = Array.from(form.querySelectorAll('.jf-progress li'));
+      const back = form.querySelector('#jf-back'), next = form.querySelector('#jf-next'), submit = form.querySelector('#jf-submit');
+      let current = 0;
+      function show(index, focus) {
+        current = index;
+        steps.forEach((step, i) => { step.hidden = i !== current; });
+        dots.forEach((dot, i) => dot.classList.toggle('on', i <= current));
+        form.querySelector('#jf-step-label').textContent = `Step ${current + 1} of ${steps.length}`;
+        back.hidden = current === 0;
+        next.hidden = current === steps.length - 1;
+        submit.hidden = current !== steps.length - 1;
+        if (focus) { const first = steps[current].querySelector('input,select,textarea'); if (first) first.focus({preventScroll:true}); form.closest('.journey-modal-panel').scrollTo({top:0,behavior:'smooth'}); }
+      }
+      next.addEventListener('click',() => show(Math.min(current + 1, steps.length - 1), true));
+      back.addEventListener('click',() => show(Math.max(current - 1, 0), true));
+      form.addEventListener('keydown',event => { if (event.key === 'Enter' && event.target.tagName === 'INPUT' && event.target.type !== 'radio' && current < steps.length - 1) { event.preventDefault(); next.click(); } });
+      form.addEventListener('submit',event => {
+        event.preventDefault();
+        const name = form.elements.name, phone = form.elements.phone;
+        if (!name.value.trim() || !phone.value.trim()) {
+          show(steps.length - 1, false);
+          (name.value.trim() ? phone : name).focus();
+          form.querySelector('#form-status').textContent = 'Please share your name and a number so we can reach you.';
+          return;
+        }
+        const data = new FormData(form);
+        const lines = [
+          ['Name', data.get('name')], ['Phone / WhatsApp', data.get('phone')], ['Email', data.get('email')],
+          ['Looking for', data.get('category')], ['Occasion', data.get('occasion')], ['Style', data.get('style')],
+          ['Diamond preference', data.get('diamond')], ['Gemstone preference', data.get('gemstone')],
+          ['Approximate budget', data.get('budget')], ['Needed by', data.get('timeline')],
+          ['Preferred conversation', data.get('consultation')], ['My story', data.get('story')], ['Anything else', data.get('extra')]
+        ].filter(([, value]) => value && String(value).trim()).map(([label, value]) => `${label}: ${value}`);
+        const message = `Hello Anokhi, I would like to make my Anokhi.\n\n${lines.join('\n')}`;
+        const url = `https://wa.me/918792701308?text=${encodeURIComponent(message)}`;
+        const link = form.querySelector('#send-enquiry');
+        link.href = url; link.hidden = false;
+        form.querySelector('#form-status').textContent = 'Thank you. Your story is ready. Open WhatsApp to review and send it to the atelier.';
+        window.open(url,'_blank','noopener,noreferrer');
+      });
+      show(0,false);
+    })();
+
+    const requestedCategory = new URLSearchParams(window.location.search).get('category');
+    const activeCategory = categoryGalleries[requestedCategory];
+    if (activeCategory) {
+      document.body.classList.add('selection-detail-view');
+      document.querySelector('#selection-detail').hidden = false;
+      document.querySelector('#selection-detail-title').textContent = activeCategory.title;
+      document.querySelector('#selection-detail-copy').textContent = activeCategory.description;
+      document.title = `${activeCategory.title} | Anokhi Diamond Atelier`;
+      document.querySelectorAll('.wordmark').forEach(link => { link.href = 'index.html#home'; });
+      const gallery = document.querySelector('#selection-gallery');
+      const imageCount = document.querySelector('#selection-image-count');
+      const galleryFigures = [];
+      let activeImage = 0;
+      function showCategoryImage(index) {
+        activeImage = (index + galleryFigures.length) % galleryFigures.length;
+        galleryFigures.forEach((item, itemIndex) => {
+          const active = itemIndex === activeImage;
+          item.figure.classList.toggle('active',active);
+          item.button.setAttribute('aria-pressed',String(active));
+        });
+        imageCount.textContent = `${String(activeImage + 1).padStart(2,'0')} / 05`;
+      }
+      activeCategory.images.forEach((item, index) => {
+        const figure = document.createElement('figure');
+        const button = document.createElement('button');
+        button.className = 'selection-gallery-item';
+        button.type = 'button';
+        button.setAttribute('aria-label',`${item.caption}, from ₹${item.price}`);
+        button.setAttribute('aria-pressed',String(index === 0));
+        const image = document.createElement('img');
+        image.src = item.src;
+        image.alt = item.alt;
+        image.loading = index < 3 ? 'eager' : 'lazy';
+        image.className = 'sg-base';
+        const angle = document.createElement('img');
+        angle.src = item.hover;
+        angle.alt = '';
+        angle.setAttribute('aria-hidden','true');
+        angle.loading = 'lazy';
+        angle.decoding = 'async';
+        angle.className = 'sg-angle';
+        const caption = document.createElement('figcaption');
+        const num = document.createElement('span'); num.className = 'sg-num'; num.textContent = String(index + 1).padStart(2,'0');
+        const title = document.createElement('span'); title.className = 'sg-name'; title.textContent = item.caption;
+        const price = document.createElement('span'); price.className = 'sg-price'; price.textContent = `From ₹${item.price}`;
+        caption.append(num, title, price);
+        button.append(image, angle);
+        figure.append(button, caption);
+        gallery.append(figure);
+        galleryFigures.push({figure,button});
+      });
+      document.querySelector('#selection-image-prev').addEventListener('click',() => showCategoryImage(activeImage - 1));
+      document.querySelector('#selection-image-next').addEventListener('click',() => showCategoryImage(activeImage + 1));
+      gallery.addEventListener('keydown',event => {
+        if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+          event.preventDefault();
+          showCategoryImage(activeImage + (event.key === 'ArrowRight' ? 1 : -1));
+          galleryFigures[activeImage].button.focus();
+        }
+      });
+      showCategoryImage(0);
+    }
+
+    // Journey 3 form opens as a popup
+    (function () {
+      const modal = document.querySelector('#journey-modal');
+      const panel = modal.querySelector('.journey-modal-panel');
+      let lastFocus = null;
+      function openForm() {
+        lastFocus = document.activeElement;
+        modal.hidden = false;
+        document.body.classList.add('modal-open');
+        requestAnimationFrame(() => modal.classList.add('open'));
+        panel.scrollTop = 0;
+        setTimeout(() => { const f = panel.querySelector('input:not([type=hidden]),select,textarea'); (f || panel).focus({preventScroll:true}); }, 60);
+      }
+      function closeForm() {
+        modal.classList.remove('open');
+        document.body.classList.remove('modal-open');
+        setTimeout(() => { modal.hidden = true; }, 300);
+        if (lastFocus && lastFocus.focus) lastFocus.focus({preventScroll:true});
+        if (location.hash === '#journey-form') history.replaceState(null, '', location.pathname + location.search);
+      }
+      document.addEventListener('click', event => {
+        const link = event.target.closest('a[href="#journey-form"]');
+        if (link) { event.preventDefault(); openForm(); return; }
+        if (event.target === modal || event.target.closest('#journey-close')) closeForm();
+      });
+      document.addEventListener('keydown', event => {
+        if (modal.hidden) return;
+        if (event.key === 'Escape') { event.preventDefault(); closeForm(); }
+        if (event.key === 'Tab') {
+          const f = [...panel.querySelectorAll('a[href],button:not([hidden]):not([disabled]),input,select,textarea')].filter(x => !x.closest('[hidden]') && x.offsetParent !== null);
+          if (!f.length) return;
+          const first = f[0], last = f[f.length - 1];
+          if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+          else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+        }
+      });
+      if (location.hash === '#journey-form') window.addEventListener('load', openForm, { once: true });
+      window.addEventListener('hashchange', () => { if (location.hash === '#journey-form' && modal.hidden) openForm(); });
+    })();
+  </script>
+</body>
+</html>

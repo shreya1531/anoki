@@ -1,0 +1,55 @@
+/* Scoped editorial additions. Hero, collection layout and Journey 3 unchanged. */
+:root{
+  --premium-velvet:var(--deep);--premium-edge:oklch(.825 .043 72 / .3);
+  --premium-overlay:oklch(.19 .082 321 / .92);--premium-facet-shadow:0 18px 45px oklch(.12 .045 321 / .2);
+}
+.values-band{background:var(--premium-velvet) url('assets/burgundy-velvet.jpg') center/cover;color:var(--champagne);border-top:1px solid var(--premium-edge);border-bottom:1px solid var(--premium-edge)}
+.values-band i{color:var(--champagne)}
+.belief{position:relative;overflow:hidden}
+.belief-jewel{width:250px;aspect-ratio:1;margin:35px auto 0;overflow:hidden;clip-path:polygon(50% 0,95% 25%,95% 75%,50% 100%,5% 75%,5% 25%)}
+.belief-jewel img{width:100%;height:100%;object-fit:cover}
+.belief .small-diamond{display:none}
+.code-facet{width:140px;aspect-ratio:1;margin:0 auto 35px;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+.code-facet img{width:100%;height:100%;object-fit:cover}
+.code-grid li{background:var(--premium-velvet) url('assets/burgundy-velvet.jpg') center/cover;border-color:var(--premium-edge)}
+.code-grid li:nth-child(even){background-position:70% 40%}
+.code-grid b,.code-grid h4{color:var(--champagne)}.code-grid span{color:var(--on-dark)}
+.code-grid li:hover{background:var(--premium-velvet) url('assets/burgundy-velvet.jpg') center/cover}
+.code-grid{border-color:var(--premium-edge)}
+.process-editorial{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:18px;max-width:1060px;margin:0 auto 55px;align-items:stretch}
+.process-editorial figure{margin:0;aspect-ratio:1.25;overflow:hidden;background:var(--premium-velvet)}
+.process-editorial img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
+.process-editorial figure:hover img{transform:scale(1.04)}
+.atelier-process{background:linear-gradient(var(--premium-overlay),var(--premium-overlay)),url('assets/burgundy-velvet.jpg') center/cover}
+.consult-card{background:transparent;border:0;border-top:1px solid var(--premium-edge);border-bottom:1px solid var(--premium-edge);padding-left:0;padding-right:0}
+.origins-grid article{padding:0 0 30px;border:0;border-bottom:1px solid var(--border);background:transparent;box-shadow:none}
+.origins-grid article::after{display:none}
+.origin-jewel{aspect-ratio:1.35;margin-bottom:24px;overflow:hidden;background:var(--premium-velvet)}
+.origin-jewel img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.origins-grid article:nth-child(2) .origin-jewel img{transform:scale(1.2) rotate(20deg)}
+.origins-grid article:nth-child(3) .origin-jewel img{transform:scale(1.4) rotate(-18deg)}
+.origins-grid article:hover{box-shadow:none;transform:translateY(-4px)}
+.origins-grid article h4,.origins-grid article p{padding:0 15px}
+.trust-band{background:linear-gradient(var(--premium-overlay),var(--premium-overlay)),url('assets/burgundy-velvet.jpg') center/cover}
+.trust-seal{font:400 40px var(--display);color:var(--champagne);text-align:center;margin:0 auto 34px}
+.trust-grid div{border-color:var(--premium-edge)}
+.founder{background:var(--premium-velvet) url('assets/burgundy-velvet.jpg') center/cover;color:var(--ivory)}
+.founder-jewel{width:200px;aspect-ratio:1;margin:0 auto 36px;overflow:hidden;border-radius:50%;border:1px solid var(--premium-edge)}
+.founder-jewel img{height:100%;width:100%;object-fit:cover}
+.founder h2,.founder>p:not(.eyebrow){color:var(--ivory)}
+.founder h2 em,.founder .eyebrow,.founder>p span{color:var(--champagne)}
+.founder .founder-description{color:var(--on-dark)}
+.clarity-jewel{width:120px;aspect-ratio:1;margin:0 auto 28px;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+.clarity-jewel img{width:100%;height:100%;object-fit:cover}
+.faq-list summary{align-items:center}.faq-list summary span{flex:none}
+.footer{background:linear-gradient(var(--premium-overlay),var(--premium-overlay)),url('assets/burgundy-velvet.jpg') center/cover}
+/* Only imagery presentation changes in the existing selection layouts. */
+.sq-card{background:var(--premium-velvet) url('assets/burgundy-velvet.jpg') center/cover}
+.sq-card img{object-fit:contain;padding:16px 0 55px}
+.selection-gallery-item img{object-fit:cover}
+@media(max-width:700px){
+ .belief-jewel{width:190px}.code-facet{width:110px}.code-grid li{border-color:var(--premium-edge)}
+ .process-editorial{gap:8px;margin-bottom:38px;grid-template-columns:1fr 1fr}.process-editorial figure{aspect-ratio:1}.process-editorial figure:first-child{grid-column:1/-1;aspect-ratio:1.8}
+ .origin-jewel{aspect-ratio:1.65}.founder-jewel{width:150px}.trust-seal{margin-bottom:26px}.clarity-jewel{width:100px}
+}
+@media(prefers-reduced-motion:reduce){.process-editorial img,.origin-jewel img{transition:none}}

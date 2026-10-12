@@ -1,0 +1,422 @@
+.rose-page.is-loading{
+  overflow: hidden;
+}
+.rose-page .page-loader{
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #100708;
+  color: #e6d6c8;
+  font: 9px/1 var(--body);
+  letter-spacing:0;
+  text-transform: uppercase;
+  transition: opacity .55s ease, visibility .55s ease;
+}
+.rose-page .page-loader.is-done{
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.rose-page .scroll-progress{
+  position: fixed;
+  z-index: 80;
+  inset: 0 0 auto;
+  width: 100%;
+  height: 2px;
+  background: rgba(244, 238, 229, .18);
+}
+.rose-page .scroll-progress span{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #c59a86;
+  transform: scaleX(0);
+  transform-origin: left center;
+  will-change: transform;
+}
+.rose-page .reveal-story{
+  position: relative;
+  z-index: 1;
+  height: 900vh;
+  height: 900svh;
+  background: var(--rose-night);
+  clip-path: inset(0);
+  isolation: isolate;
+}
+.rose-page .reveal-stage{
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  min-height: 540px;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--rose-night);
+  color: #f4eee5;
+}
+.rose-page .stage-ground,
+.rose-page .rose-photo,
+.rose-page .rose-photo img,
+.rose-page .campaign-background,
+.rose-page .campaign-light{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.rose-page .stage-ground{
+  z-index: 0;
+  background:
+    radial-gradient(ellipse at 52% 45%, rgba(90, 12, 27, .2), transparent 47%),
+    linear-gradient(155deg, #17090b 0%, #080607 74%, #12080a 100%);
+}
+.rose-page .rose-photo{
+  z-index: 1;
+  overflow: hidden;
+  opacity: 1;
+  will-change: opacity;
+}
+.rose-page .rose-photo::after{
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(90deg, rgba(7, 4, 5, .48), transparent 30%, transparent 70%, rgba(7, 4, 5, .42)),
+    linear-gradient(0deg, rgba(7, 4, 5, .72), transparent 35%, rgba(7, 4, 5, .15)),
+    radial-gradient(ellipse at 50% 48%, transparent 16%, rgba(7, 4, 5, .48) 100%);
+}
+.rose-page .rose-photo img{
+  display: block;
+  object-fit: cover;
+  object-position: 50% 49%;
+  transform: scale(1.035);
+  will-change: transform;
+}
+.rose-page .campaign-background{
+  z-index: 2;
+  background: #13070a url("assets/burgundy-velvet.jpg") center/cover no-repeat;
+  opacity: 0;
+  will-change: opacity;
+}
+.rose-page .campaign-background::after{
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    radial-gradient(ellipse at 52% 42%, rgba(89, 9, 27, .28), transparent 52%),
+    linear-gradient(0deg, rgba(7, 4, 5, .58), transparent 30%, rgba(7, 4, 5, .12));
+}
+.rose-page .campaign-light{
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(ellipse at 53% 47%, rgba(246, 197, 165, .15), transparent 48%);
+  mix-blend-mode: screen;
+  will-change: opacity;
+}
+.rose-page .petal-field{
+  position: absolute;
+  z-index: 4;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.rose-page .rose-petal{
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  display: block;
+  width: clamp(90px, 14vw, 178px);
+  height: auto;
+  opacity: 0;
+  filter: drop-shadow(0 16px 20px rgba(0, 0, 0, .3));
+  transform: translate3d(-50%, -50%, 0);
+  transform-origin: 50% 55%;
+  will-change: transform, opacity;
+}
+.rose-page .jewel-composition{
+  position: absolute;
+  z-index: 5;
+  top: 49%;
+  left: 52%;
+  width: min(77vw, 82svh, 820px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  filter: drop-shadow(0 24px 35px rgba(0, 0, 0, .42));
+}
+.rose-page .ruby-suite-final,
+.rose-page .assembly-piece{
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.rose-page .ruby-suite-final{
+  opacity: 0;
+  transform: translateY(1.4%);
+  will-change: opacity, transform;
+}
+.rose-page .assembly-piece{
+  opacity: 0;
+  transform: translate3d(var(--from-x), var(--from-y), 0) rotate(var(--from-rotation)) scale(.84);
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+.rose-page .piece-left-chain{
+  --from-x: -15vw;
+  --from-y: -12vh;
+  --from-rotation: -9deg;
+}
+.rose-page .piece-right-chain{
+  --from-x: 16vw;
+  --from-y: -13vh;
+  --from-rotation: 8deg;
+}
+.rose-page .piece-pendant{
+  --from-x: 0;
+  --from-y: 18vh;
+  --from-rotation: -5deg;
+}
+.rose-page .piece-left-earring{
+  --from-x: -18vw;
+  --from-y: 14vh;
+  --from-rotation: -14deg;
+}
+.rose-page .piece-right-earring{
+  --from-x: 18vw;
+  --from-y: 13vh;
+  --from-rotation: 13deg;
+}
+.rose-page .reveal-title,
+.rose-page .reveal-caption,
+.rose-page .reveal-ending{
+  position: absolute;
+  z-index: 8;
+  text-shadow: 0 2px 28px rgba(0, 0, 0, .44);
+}
+.rose-page .reveal-title{
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  text-align: center;
+  pointer-events: none;
+  will-change: opacity, transform;
+}
+.rose-page .eyebrow{
+  display: block;
+  font: 400 9px/1.5 var(--body);
+  letter-spacing:0;
+  text-transform: uppercase;
+}
+.rose-page .reveal-title .eyebrow{
+  color: #e4c3ae;
+}
+.rose-page .reveal-title h1{
+  margin: 19px 0 13px;
+  font: 300 80px/.77 "Cormorant Garamond", Georgia, serif;
+  letter-spacing:0;
+}
+.rose-page .reveal-title h1 em,
+.rose-page .reveal-ending h2 em{
+  color: #e2b8a0;
+  font-weight: 300;
+}
+.rose-page .reveal-title p{
+  margin: 8px 0 22px;
+  font: 300 11px/1.7 var(--body);
+  letter-spacing:0;
+  color: rgba(250, 243, 235, .82);
+}
+.rose-page .hero-collection,
+.rose-page .ending-link{
+  color: inherit;
+  font: 400 9px/1.2 var(--body);
+  letter-spacing:0;
+  text-decoration: none;
+  text-transform: uppercase;
+  pointer-events: auto;
+}
+.rose-page .hero-collection{
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(242, 228, 213, .58);
+}
+.rose-page .hero-collection span{
+  margin-left: 6px;
+}
+.rose-page .reveal-caption{
+  left: clamp(28px, 6vw, 86px);
+  bottom: clamp(88px, 13vh, 132px);
+  width: min(300px, 42vw);
+  opacity: 0;
+  color: #eee7da;
+  animation: none;
+  will-change: opacity, transform;
+}
+.rose-page .reveal-caption .eyebrow{
+  margin-bottom: 8px;
+  color: var(--rose-gold);
+  font-size: 8px;
+}
+.rose-page .reveal-caption h2{
+  margin: 0 0 6px;
+  font: 300 43px/1 "Cormorant Garamond", Georgia, serif;
+}
+.rose-page .reveal-caption p{
+  max-width: 270px;
+  margin: 0;
+  font: 300 10px/1.7 var(--body);
+  color: rgba(238, 231, 218, .76);
+}
+.rose-page .reveal-ending{
+  right: 5%;
+  top: clamp(88px, 10vh, 116px);
+  bottom: auto;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  will-change: opacity, transform;
+}
+.rose-page .reveal-ending .eyebrow{
+  color: #e0c1a7;
+}
+.rose-page .reveal-ending h2{
+  margin: 8px 0 13px;
+  font: 300 46px/1 "Cormorant Garamond", Georgia, serif;
+}
+.rose-page .ending-link{
+  pointer-events: auto;
+}
+.rose-page .ending-link span{
+  margin-left: 6px;
+}
+.rose-page .story-footer{
+  position: absolute;
+  z-index: 9;
+  right: 5%;
+  bottom: 25px;
+  left: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(238, 231, 218, .62);
+  font: 400 8px/1.3 var(--body);
+  letter-spacing:0;
+  text-transform: uppercase;
+}
+.rose-page .scroll-label{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(244, 238, 229, .78);
+}
+.rose-page .scroll-label svg{
+  animation: rose-scroll 1.7s ease-in-out infinite;
+}
+.rose-page .story-track{
+  position: absolute;
+  z-index: 9;
+  top: 25%;
+  right: 2.8%;
+  bottom: 25%;
+  width: 1px;
+  background: rgba(244, 238, 229, .22);
+}
+.rose-page .story-track div{
+  width: 100%;
+  height: 100%;
+  background: #e2b8a0;
+  transform: scaleY(0);
+  transform-origin: top center;
+  will-change: transform;
+}
+@keyframes rose-scroll{
+  0%, 100% { transform: translateY(-2px); }
+  50% { transform: translateY(3px); }
+}
+@media (max-width: 760px){.rose-page .reveal-stage{
+    min-height: 520px;
+  }
+.rose-page .rose-photo img{
+    object-position: 50% 48%;
+  }
+.rose-page .rose-petal{
+    width: clamp(68px, 18vw, 124px);
+  }
+.rose-page .jewel-composition{
+    top: 47%;
+    left: 50%;
+    width: min(94vw, 78svh, 680px);
+  }
+.rose-page .reveal-title{
+    padding: 0 18px;
+  }
+.rose-page .reveal-title h1{
+    margin: 15px 0 11px;
+    font-size: 88px;
+  }
+.rose-page .reveal-title p{
+    max-width: 280px;
+    margin: 7px 0 19px;
+    font-size: 10px;
+  }
+.rose-page .reveal-caption{
+    left: 7%;
+    bottom: 12%;
+    width: min(250px, 62vw);
+  }
+.rose-page .reveal-caption h2{
+    font-size: 33px;
+  }
+.rose-page .reveal-caption p{
+    font-size: 9px;
+  }
+.rose-page .reveal-ending{
+    top: clamp(42px, 6vh, 58px);
+    bottom: auto;
+  }
+.rose-page .reveal-ending h2{
+    margin: 5px 0 9px;
+    font-size: 34px;
+  }
+.rose-page .story-footer{
+    right: 7%;
+    bottom: 19px;
+    left: 7%;
+    font-size: 7px;
+    letter-spacing:0;
+  }
+.rose-page .story-track{
+    right: 3.5%;
+    top: 29%;
+    bottom: 29%;
+  }}
+@media (max-width: 380px){.rose-page .story-footer .chapter-label{
+    max-width: 76px;
+  }
+.rose-page .scroll-label{
+    gap: 4px;
+  }
+.rose-page .chapter-count{
+    min-width: 42px;
+    text-align: right;
+  }}
+@media (prefers-reduced-motion: reduce){.rose-page *,
+  .rose-page *::before,
+  .rose-page *::after{
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }}

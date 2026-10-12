@@ -1,0 +1,343 @@
+.temple-page .scroll-progress span{
+  background: var(--temple-gold);
+}
+.temple-reveal{
+  position: relative;
+  height: 460vh;
+  min-height: 2700px;
+  background: var(--temple-night);
+  clip-path: inset(0);
+  isolation: isolate;
+}
+.temple-reveal::after{
+  content: none !important;
+}
+.temple-stage{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  min-height: 520px;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--temple-night);
+}
+.stage-ground,
+.temple-photo,
+.temple-photo img,
+.temple-shade,
+.campaign-light{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.stage-ground{
+  z-index: 0;
+  background:
+    radial-gradient(ellipse at 50% 47%, rgba(89, 62, 34, .33), transparent 48%),
+    radial-gradient(ellipse at 50% 100%, rgba(22, 39, 30, .55), transparent 58%),
+    linear-gradient(145deg, #101613 0%, #080b09 55%, #10100d 100%);
+}
+.temple-photo{
+  z-index: 1;
+  opacity: 1;
+  overflow: hidden;
+  will-change: opacity, transform;
+}
+.temple-photo img{
+  object-fit: cover;
+  object-position: 50% 53%;
+  transform: scale(1.025);
+}
+.temple-shade{
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(4, 7, 6, .45), transparent 72%),
+    linear-gradient(180deg, rgba(4, 6, 5, .38), transparent 24%, rgba(4, 6, 5, .12) 58%, rgba(4, 6, 5, .68));
+}
+.campaign-light{
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    radial-gradient(ellipse at 52% 48%, rgba(154, 112, 56, .24), transparent 42%),
+    radial-gradient(ellipse at 50% 58%, rgba(6, 8, 7, 0), rgba(2, 4, 3, .3) 68%);
+}
+.necklace-art{
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: 52%;
+  width: min(70vw, 78vh, 780px);
+  width: min(70vw, 78svh, 780px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  filter: drop-shadow(0 24px 34px rgba(0, 0, 0, .38));
+}
+.necklace-art img{
+  display: block;
+  max-width: none;
+  height: auto;
+}
+.final-necklace{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100% !important;
+  object-fit: contain;
+  opacity: 0;
+  transform: translateY(1.5%);
+  will-change: opacity, transform;
+}
+.assembly-piece{
+  position: absolute;
+  object-fit: fill;
+  opacity: 0;
+  transform: translate3d(var(--from-x), var(--from-y), 0) rotate(var(--from-rotation)) scale(.82);
+  transform-origin: center;
+  will-change: opacity, transform;
+}
+.piece-left-chain{
+  top: 0;
+  left: 0;
+  width: 41.02%;
+  height: 63.97%;
+  --from-x: -18vw;
+  --from-y: -14vh;
+  --from-rotation: -8deg;
+}
+.piece-right-chain{
+  top: 0;
+  left: 58.98%;
+  width: 41.02%;
+  height: 63.97%;
+  --from-x: 18vw;
+  --from-y: -14vh;
+  --from-rotation: 8deg;
+}
+.piece-left-panel{
+  top: 55.18%;
+  left: 0;
+  width: 39.26%;
+  height: 41.02%;
+  --from-x: -12vw;
+  --from-y: 13vh;
+  --from-rotation: -7deg;
+}
+.piece-right-panel{
+  top: 55.18%;
+  left: 60.74%;
+  width: 39.26%;
+  height: 41.02%;
+  --from-x: 12vw;
+  --from-y: 13vh;
+  --from-rotation: 7deg;
+}
+.piece-pendant{
+  top: 50.29%;
+  left: 34.38%;
+  width: 31.25%;
+  height: 43.46%;
+  z-index: 2;
+  --from-x: 0;
+  --from-y: 17vh;
+  --from-rotation: 0deg;
+}
+.reveal-title,
+.reveal-caption,
+.story-footer,
+.story-track{
+  position: absolute;
+  z-index: 6;
+}
+.reveal-title{
+  top: 28%;
+  left: clamp(28px, 9vw, 150px);
+  max-width: min(58vw, 780px);
+  color: #f6f0e5;
+  opacity: 1;
+  text-shadow: 0 2px 30px rgba(0, 0, 0, .38);
+  will-change: opacity, transform;
+}
+.reveal-title h1{
+  margin: 14px 0 13px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 80px;
+  font-weight: 300;
+  line-height: .77;
+  letter-spacing:0;
+  text-transform: uppercase;
+}
+.reveal-title h1 em{
+  color: #e5c88f;
+  font-weight: 300;
+}
+.reveal-title p{
+  margin: 24px 0 0;
+  font-family: var(--body);
+  font-size: 10px;
+  letter-spacing:0;
+  opacity: .83;
+}
+.reveal-caption{
+  left: clamp(28px, 5.5vw, 84px);
+  bottom: clamp(82px, 12vh, 120px);
+  width: min(300px, 44vw);
+  color: #eee7da;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, .45);
+  opacity: 0;
+  transform: translateY(16px);
+  will-change: opacity, transform;
+}
+.reveal-caption .eyebrow{
+  margin-bottom: 8px;
+  color: #d4b77f;
+  font-size: 8px;
+}
+.reveal-caption h2{
+  margin: 0 0 5px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 43px;
+  font-weight: 300;
+  line-height: 1;
+}
+.reveal-caption p{
+  margin: 0;
+  font-family: var(--body);
+  font-size: 10px;
+  line-height: 1.7;
+  opacity: .75;
+}
+.story-footer{
+  right: 84px;
+  bottom: 30px;
+  left: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  color: rgba(244, 239, 228, .76);
+  font-family: var(--body);
+  font-size: 8px;
+  letter-spacing:0;
+  text-transform: uppercase;
+}
+.scroll-label{
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  transition: opacity .35s ease;
+}
+.scroll-label svg{
+  animation: temple-scroll 1.7s ease-in-out infinite;
+}
+.story-track{
+  top: 50%;
+  right: 22px;
+  width: 1px;
+  height: 82px;
+  overflow: hidden;
+  transform: translateY(-50%);
+  background: rgba(244, 239, 228, .3);
+}
+.story-track div{
+  width: 100%;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  background: #d3b77e;
+}
+@keyframes temple-scroll{
+  0%, 100% { transform: translateY(-2px); }
+  50% { transform: translateY(3px); }
+}
+@media (max-width: 760px){.temple-reveal{
+    height: 430vh;
+    min-height: 2300px;
+  }
+.temple-stage{
+    min-height: 480px;
+  }
+.necklace-art{
+    top: 49%;
+    left: 50%;
+    width: min(91vw, 66svh, 620px);
+  }
+.temple-photo img{
+    object-position: 48% 50%;
+  }
+.temple-shade{
+    background:
+      linear-gradient(180deg, rgba(4, 6, 5, .4), transparent 28%, rgba(4, 6, 5, .16) 58%, rgba(4, 6, 5, .7)),
+      linear-gradient(90deg, rgba(4, 7, 6, .2), transparent 80%);
+  }
+.reveal-title{
+    top: 24%;
+    left: 7%;
+    max-width: 86%;
+  }
+.reveal-title h1{
+    margin-top: 13px;
+    font-size: 80px;
+  }
+.reveal-title .eyebrow{
+    font-size: 8px;
+  }
+.reveal-title p{
+    margin-top: 18px;
+    font-size: 9px;
+  }
+.reveal-caption{
+    bottom: 92px;
+    left: 7%;
+    width: min(260px, 72vw);
+  }
+.reveal-caption h2{
+    font-size: 34px;
+  }
+.reveal-caption p{
+    font-size: 9px;
+  }
+.story-footer{
+    right: 7%;
+    bottom: 24px;
+    left: 7%;
+    gap: 8px;
+    font-size: 7px;
+  }
+.chapter-label{
+    display: none;
+  }
+.story-track{
+    right: 7%;
+    width: 1px;
+    height: 66px;
+  }}
+@media (max-width: 380px){.temple-reveal{
+    height: 410vh;
+  }
+.necklace-art{
+    top: 48%;
+    width: 92vw;
+  }
+.reveal-title h1{
+    font-size: 55px;
+  }
+.story-footer{
+    font-size: 6px;
+    letter-spacing:0;
+  }}
+@media (prefers-reduced-motion: reduce){.scroll-label svg{
+    animation: none;
+  }
+.assembly-piece,
+  .final-necklace,
+  .temple-photo,
+  .reveal-caption,
+  .reveal-title{
+    will-change: auto;
+  }}

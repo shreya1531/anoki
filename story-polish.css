@@ -1,0 +1,324 @@
+/* =====================================================================
+   Story pages polish — Rose, Temple, Mayura
+   Loaded last. Fixes hero framing, text legibility and overlaps, and
+   keeps every reveal inside the viewport at every screen size.
+   ===================================================================== */
+
+/* ---------- shared ---------- */
+:root { --story-header-h: 80px; }
+@media (max-width: 700px) { :root { --story-header-h: 66px; } }
+
+html { scroll-padding-top: calc(var(--story-header-h) + 12px); }
+
+/* Smaller, calmer chapter text: always legible, never wider than its column. */
+.reveal-caption { pointer-events: none; }
+.reveal-caption h2 { text-wrap: balance; }
+.reveal-caption p { font-size: 12px; line-height: 1.7; opacity: .88; }
+.reveal-caption .eyebrow { font-size: 10px; }
+.story-footer { font-size: 9px; }
+.reveal-ending { pointer-events: none; }
+.reveal-ending a, .reveal-title a { pointer-events: auto; }
+.reveal-ending h2 { text-wrap: balance; }
+.story-track { right: clamp(8px, 1.6vw, 22px); }
+
+/* A soft bottom scrim keeps captions and the footer readable on any frame. */
+.reveal-stage::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 34%;
+  z-index: 5;
+  pointer-events: none;
+  background: linear-gradient(0deg, rgba(8, 3, 10, .62), transparent);
+}
+.reveal-caption, .story-footer, .story-track, .reveal-title, .reveal-ending { z-index: 8; }
+
+/* ---------- TEMPLE : new sunset hero ---------- */
+.temple-page .temple-photo img {
+  object-fit: cover;
+  object-position: 49% 46%;
+  transform: scale(1.02);
+}
+.temple-page .temple-shade {
+  background:
+    linear-gradient(90deg, rgba(10, 6, 4, .66) 0%, rgba(10, 6, 4, .38) 32%, rgba(10, 6, 4, 0) 62%),
+    linear-gradient(180deg, rgba(10, 6, 4, .28) 0%, rgba(10, 6, 4, 0) 22%, rgba(10, 6, 4, 0) 62%, rgba(10, 6, 4, .55) 100%);
+}
+.temple-page .reveal-title {
+  top: 50%;
+  margin-top: -150px;
+  max-width: min(46vw, 620px);
+  text-shadow: 0 2px 26px rgba(0, 0, 0, .6), 0 0 2px rgba(0, 0, 0, .35);
+}
+.temple-page .reveal-title h1 { font-size: clamp(56px, 6.4vw, 92px); line-height: .92; }
+.temple-page .reveal-title .eyebrow { font-size: 11px; color: #f1d9a8; }
+.temple-page .reveal-title p { font-size: 14px; opacity: .95; margin-top: 22px; }
+.temple-page .necklace-art { width: min(64vw, 70svh, 760px); }
+
+/* ---------- ROSE : legibility over the bouquet ---------- */
+.rose-page .reveal-title::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  width: min(92vw, 760px);
+  height: 440px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(ellipse at center, rgba(14, 3, 6, .66) 0%, rgba(14, 3, 6, .38) 48%, rgba(14, 3, 6, 0) 74%);
+  pointer-events: none;
+}
+.rose-page .reveal-title h1 { font-size: clamp(56px, 6.4vw, 92px); line-height: .9; }
+.rose-page .reveal-title h1 em { color: #f3cdb4; }
+.rose-page .reveal-title .eyebrow { font-size: 11px; color: #f4d3bd; }
+.rose-page .reveal-title p { font-size: 14px; color: rgba(255, 248, 241, .95); margin: 14px 0 22px; }
+.rose-page .hero-collection { font-size: 11px; }
+.rose-page .jewel-composition { width: min(66vw, 70svh, 820px); }
+
+/* ---------- MAYURA ---------- */
+.mayura-page .reveal-stage { color: var(--ivory); }
+.mayura-page .reveal-canvas { z-index: 1; }
+.mayura-page .reveal-title,
+.mayura-page .reveal-ending {
+  position: absolute;
+  z-index: 8;
+  top: 0;
+  bottom: 0;
+  left: var(--content-gutter);
+  right: auto;
+  width: min(44%, 520px);
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  padding-bottom: 8vh;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, .5);
+}
+.mayura-page .reveal-title { pointer-events: none; }
+.mayura-page .reveal-title .eyebrow,
+.mayura-page .reveal-ending .eyebrow { font-size: 11px; color: var(--champagne); margin: 0 0 18px; }
+.mayura-page .reveal-title h1 {
+  font: 400 clamp(54px, 7vw, 92px)/1 var(--display);
+  letter-spacing: .12em;
+  color: var(--ivory);
+  margin: 0 0 18px;
+}
+.mayura-page .reveal-title p { font-size: 14px; color: var(--on-dark); margin: 0 0 26px; }
+.mayura-page .hero-collection,
+.mayura-page .ending-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--ivory);
+  border: 0;
+  border-bottom: 1px solid var(--champagne);
+  padding: 0 0 8px;
+  background: none;
+}
+.mayura-page .reveal-ending h2 {
+  font: 400 clamp(36px, 4.2vw, 62px)/1.06 var(--display);
+  color: var(--ivory);
+  margin: 0 0 28px;
+}
+.mayura-page .reveal-ending h2 em { color: var(--champagne); }
+.mayura-page .reveal-caption {
+  position: absolute;
+  z-index: 8;
+  left: var(--content-gutter);
+  bottom: clamp(70px, 11vh, 110px);
+  width: min(320px, 40%);
+  max-width: none;
+  color: var(--ivory);
+}
+.mayura-page .reveal-caption h2 {
+  font: 400 clamp(30px, 3.2vw, 44px)/1.05 var(--display);
+  color: var(--ivory);
+  margin: 6px 0 10px;
+}
+.mayura-page .reveal-caption p { color: var(--on-dark); margin: 0; font-size: 12px; }
+.mayura-page .reveal-caption .eyebrow { color: var(--champagne); margin: 0; }
+.mayura-page .story-footer {
+  position: absolute;
+  z-index: 8;
+  left: var(--content-gutter);
+  right: var(--content-gutter);
+  bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: rgba(244, 239, 228, .82);
+  font-size: 9px;
+  text-transform: uppercase;
+}
+.mayura-page .story-track {
+  top: 50%;
+  bottom: auto;
+  height: 82px;
+  margin-top: -41px;
+  right: clamp(8px, 1.6vw, 22px);
+  width: 1px;
+  background: rgba(244, 239, 228, .28);
+}
+
+/* Mayura details — ivory panel with the necklace on a warm mat */
+.mayura-details {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 8%;
+  align-items: center;
+  padding: 110px var(--content-gutter);
+  background: var(--ivory);
+  color: var(--ink);
+}
+.mayura-details-image {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  background: #ece3d6;
+  overflow: hidden;
+}
+.mayura-details-image img { width: 100%; height: 100%; object-fit: contain; padding: 4%; }
+.mayura-details-copy .eyebrow { color: #8e7a62; margin-bottom: 20px; display: block; }
+.mayura-details-copy h2 {
+  font: 400 clamp(36px, 4.2vw, 62px)/1.05 var(--display);
+  color: var(--plum);
+  margin: 0 0 26px;
+}
+.mayura-details-copy h2 em { color: var(--muted); font-style: italic; }
+.mayura-details-copy p { font-size: 13px; line-height: 1.9; color: var(--muted); max-width: 520px; margin: 0 0 16px; }
+.mayura-detail-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  border-top: 1px solid var(--border);
+  padding: 15px 0;
+  font-size: 10px;
+  max-width: 520px;
+}
+.mayura-detail-line span { letter-spacing: .13em; color: var(--muted); }
+.mayura-detail-line b { font-weight: 400; text-align: right; }
+.mayura-back {
+  display: inline-block;
+  margin-top: 22px;
+  font-size: 10px;
+  letter-spacing: .15em;
+  color: var(--plum);
+  border-bottom: 1px solid var(--champagne);
+  padding-bottom: 8px;
+}
+
+/* Closing call-to-action band */
+.anokhi-cta {
+  background: var(--plum);
+  color: var(--ivory);
+  text-align: center;
+  padding: 100px var(--content-gutter);
+}
+.anokhi-cta p { font-size: 10px; letter-spacing: .24em; text-transform: uppercase; color: var(--champagne); margin: 0 0 18px; }
+.anokhi-cta h2 { font: 400 clamp(30px, 4vw, 52px)/1.15 var(--display); max-width: 760px; margin: 0 auto 34px; color: var(--ivory); text-wrap: balance; }
+.anokhi-cta .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.a-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 22px;
+  border: 1px solid var(--champagne);
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--ivory);
+  transition: background .3s, color .3s;
+}
+.a-btn.gold { background: var(--champagne); color: var(--deep); }
+.a-btn:hover { background: var(--ivory); color: var(--deep); }
+.anokhi-cta small { display: block; margin-top: 30px; font-size: 10px; color: var(--on-dark); opacity: .85; }
+
+/* ---------- TABLET ---------- */
+@media (max-width: 1000px) {
+  .temple-page .reveal-title { max-width: 62vw; margin-top: -120px; }
+  .temple-page .necklace-art { width: min(74vw, 66svh); }
+  .rose-page .jewel-composition { width: min(78vw, 66svh); }
+  .mayura-page .reveal-title,
+  .mayura-page .reveal-ending { width: min(46%, 420px); }
+  .mayura-details { gap: 6%; padding: 80px var(--content-gutter); }
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 700px) {
+  .reveal-caption p { font-size: 12px; }
+  .reveal-stage::after { height: 40%; }
+
+  /* Temple: gopuram stays centred, headline sits over the sky */
+  .temple-page .temple-photo img { object-position: 47% 50%; }
+  .temple-page .temple-shade {
+    background:
+      linear-gradient(180deg, rgba(10, 6, 4, .62) 0%, rgba(10, 6, 4, .3) 38%, rgba(10, 6, 4, 0) 58%, rgba(10, 6, 4, .6) 100%);
+  }
+  .temple-page .reveal-title { top: 16%; margin-top: 0; left: 7%; max-width: 86%; }
+  .temple-page .reveal-title h1 { font-size: clamp(50px, 15vw, 64px); }
+  .temple-page .reveal-title p { font-size: 13px; }
+  .temple-page .necklace-art { width: min(90vw, 58svh); top: 50%; }
+
+  /* Rose */
+  .rose-page .reveal-title::before { height: 360px; }
+  .rose-page .reveal-title h1 { font-size: clamp(50px, 15vw, 64px); }
+  .rose-page .reveal-title p { font-size: 13px; }
+  .rose-page .jewel-composition { width: min(90vw, 58svh); top: 50%; }
+
+  /* Mayura: headline over the art, art low and centred */
+  .mayura-page .reveal-title,
+  .mayura-page .reveal-ending {
+    top: 6%;
+    bottom: auto;
+    left: 7%;
+    right: 7%;
+    width: auto;
+    padding-bottom: 0;
+    justify-content: flex-start;
+  }
+  .mayura-page .reveal-title h1 { font-size: clamp(48px, 15vw, 64px); letter-spacing: .1em; margin-bottom: 12px; }
+  .mayura-page .reveal-title p { font-size: 13px; margin-bottom: 18px; }
+  .mayura-page .reveal-ending h2 { font-size: clamp(30px, 9vw, 38px); margin-bottom: 18px; }
+  .mayura-page .reveal-caption { left: 7%; width: 70%; bottom: 66px; }
+  .mayura-page .reveal-caption h2 { font-size: 30px; }
+  .mayura-page .story-footer { left: 7%; right: 7%; font-size: 8px; }
+  .mayura-page .chapter-label { max-width: 42%; }
+  .mayura-details { grid-template-columns: 1fr; gap: 34px; padding: 64px 7%; }
+  .mayura-details-copy h2 { font-size: 40px; }
+  .mayura-detail-line { font-size: 9px; }
+  .anokhi-cta { padding: 72px 7%; }
+  .anokhi-cta .cta-row { flex-direction: column; align-items: stretch; }
+}
+
+@media (max-width: 380px) {
+  .temple-page .reveal-title h1, .rose-page .reveal-title h1 { font-size: 46px; }
+  .story-footer, .mayura-page .story-footer { font-size: 7px; }
+}
+
+@media (max-height: 560px) and (orientation: landscape) {
+  .temple-page .reveal-title { margin-top: -90px; }
+  .temple-page .reveal-title h1, .rose-page .reveal-title h1, .mayura-page .reveal-title h1 { font-size: 44px; }
+  .reveal-caption h2 { font-size: 26px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* keep the closing headline clear of the finished jewel */
+@media (min-width: 701px) {
+  .temple-page .necklace-art, .rose-page .jewel-composition { top: 55%; }
+}
+@media (min-width: 701px) {
+  .rose-page .jewel-composition { top: 57%; width: min(64vw, 64svh, 800px); }
+}
+.mayura-details-image { position: relative; display: block; }
+.mayura-details-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 4%; }
+
+/* compositor hints: keeps the reveals on the GPU for smoother motion */
+.reveal-stage img,.reveal-stage canvas,.reveal-title,.reveal-caption,.reveal-ending{will-change:transform,opacity;backface-visibility:hidden}

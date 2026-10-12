@@ -1,0 +1,48 @@
+/* Collections: simple image cards (image as background, text on top). No hover or motion effects. */
+.collection-cards{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:70px}
+.collection-card{position:relative;display:block;aspect-ratio:3/4.2;overflow:hidden;background:var(--deep);border-radius:2px;color:var(--ivory)}
+.collection-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.collection-card::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(20,3,26,.88) 0%,rgba(20,3,26,.35) 42%,rgba(20,3,26,0) 70%)}
+.collection-card-text{position:absolute;left:20px;right:20px;bottom:22px;z-index:2;display:flex;flex-direction:column;gap:8px}
+.collection-card-text i{font:500 8px/1.4 var(--body);font-style:normal;letter-spacing:.14em;color:var(--champagne)}
+.collection-card-text b{font:400 28px/1.1 var(--display);color:var(--ivory)}
+.collection-card-text em{font:500 9px/1.4 var(--body);font-style:normal;letter-spacing:.12em;text-transform:uppercase;color:var(--champagne)}
+.collection-card-text u{text-decoration:none;margin-left:6px}
+.collection-card:focus-visible{outline:2px solid var(--rose);outline-offset:4px}
+@media(max-width:1000px){.collection-cards{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.collection-cards{grid-template-columns:1fr 1fr;gap:12px;margin-top:48px}.collection-card-text{left:14px;right:14px;bottom:16px}.collection-card-text b{font-size:22px}}
+@media(max-width:420px){.collection-cards{grid-template-columns:1fr}.collection-card{aspect-ratio:4/3.6}}
+
+/* Selection page: five plain, equal cards. No expansion, zoom or hover effect. */
+
+.selection-gallery figure,.selection-gallery figure.active{flex:1!important;transition:none!important}
+.selection-gallery-item img,.selection-gallery-item:hover img{transform:none!important;transition:none!important}
+.selection-gallery-controls{display:none}
+@media(max-width:700px){.selection-gallery{display:grid;grid-template-columns:1fr 1fr;height:auto;gap:10px}.selection-gallery figure{aspect-ratio:3/4}.selection-gallery figure:last-child{grid-column:1/-1;aspect-ratio:16/9}}
+
+/* Category page: three cards per row; hovering shows the same piece from a closer, different angle */
+.selection-gallery{display:grid!important;grid-template-columns:repeat(3,1fr);height:auto!important;gap:20px;overflow:visible}
+.selection-gallery figure,.selection-gallery figure.active{flex:none!important;display:block;background:transparent;overflow:visible}
+.selection-gallery-item{display:block;position:relative;width:100%;aspect-ratio:4/5;height:auto;overflow:hidden;background:var(--deep)}
+.selection-gallery-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.selection-gallery-item img.sg-angle{opacity:0;transform:scale(1.02);transition:opacity .55s var(--ease),transform .9s var(--ease)!important}
+.selection-gallery-item:hover img.sg-angle,.selection-gallery-item:focus-visible img.sg-angle{opacity:1;transform:none!important}
+.selection-gallery figcaption{padding:12px 2px 0;background:transparent;font-size:11px;color:var(--muted)}
+@media(max-width:1000px){.selection-gallery{gap:14px}}
+@media(max-width:700px){.selection-gallery{grid-template-columns:1fr 1fr;gap:10px}.selection-gallery figure:last-child{grid-column:auto;aspect-ratio:auto}.selection-gallery figure{aspect-ratio:auto}}
+.selection-gallery figcaption{background:transparent!important}
+
+/* Category page cards: design, then name and price beneath */
+.selection-gallery{gap:34px 24px!important}
+.selection-gallery-item{aspect-ratio:16/10}
+.selection-gallery figcaption{display:grid!important;grid-template-columns:auto 1fr;grid-template-areas:"num name" "num price";column-gap:14px;row-gap:2px;align-items:baseline;padding:16px 2px 0!important;border-bottom:1px solid var(--border);padding-bottom:16px!important}
+.sg-num{grid-area:num;font-size:10px;letter-spacing:.14em;color:var(--muted)}
+.sg-name{grid-area:name;font:400 24px/1.15 var(--display);color:var(--plum)}
+.sg-price{grid-area:price;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.selection-gallery figure{transition:none}
+.selection-gallery-item{cursor:default}
+@media(max-width:700px){.selection-gallery{grid-template-columns:1fr!important;gap:26px!important}.selection-gallery figure:last-child{grid-column:auto}.sg-name{font-size:22px}}
+.selection-gallery{align-items:start}
+.selection-gallery-item{height:auto!important;flex:none!important;width:100%}
+.selection-gallery figcaption{background:transparent!important}
+.selection-gallery figure,.selection-gallery figure.active{background:transparent!important}

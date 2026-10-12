@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" role="img" aria-label="An eye whose iris is a faceted diamond">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a0745"/><stop offset="1" stop-color="#18021f"/></linearGradient>
+<radialGradient id="iris" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#f6e6d0"/><stop offset=".55" stop-color="#c8a5ae"/><stop offset="1" stop-color="#5a1a62"/></radialGradient>
+<clipPath id="eye"><path d="M90 600 C230 430 570 430 710 600 C570 770 230 770 90 600 Z"/></clipPath>
+</defs>
+<rect width="800" height="1200" fill="url(#bg)"/>
+<g fill="none" stroke="#d8c2a8" stroke-opacity=".14"><circle cx="400" cy="600" r="380"/><circle cx="400" cy="600" r="300"/><circle cx="400" cy="600" r="220"/></g>
+<g stroke="#d8c2a8" stroke-opacity=".28" stroke-width="1.5"><path d="M400 120 V300"/><path d="M230 160 L290 320"/><path d="M570 160 L510 320"/><path d="M400 1080 V900"/><path d="M230 1040 L290 880"/><path d="M570 1040 L510 880"/></g>
+<path d="M90 600 C230 430 570 430 710 600 C570 770 230 770 90 600 Z" fill="#f8f3ed"/>
+<g clip-path="url(#eye)">
+<circle cx="400" cy="600" r="150" fill="url(#iris)"/>
+<circle cx="400" cy="600" r="150" fill="none" stroke="#24032a" stroke-width="6"/>
+<path d="M400 520 L452 572 L400 660 L348 572 Z" fill="#fffaf1" fill-opacity=".92" stroke="#d8c2a8" stroke-width="4"/>
+<path d="M348 572 H452 M400 520 L376 572 L400 660 L424 572 Z" fill="none" stroke="#c8a5ae" stroke-width="3"/>
+<circle cx="350" cy="545" r="16" fill="#fff" fill-opacity=".9"/>
+<path d="M0 0 H800 V470 C560 400 240 400 0 470 Z" fill="#24032a" fill-opacity=".18"/>
+</g>
+<path d="M90 600 C230 430 570 430 710 600" fill="none" stroke="#d8c2a8" stroke-width="7" stroke-linecap="round"/>
+<path d="M90 600 C230 770 570 770 710 600" fill="none" stroke="#d8c2a8" stroke-width="3" stroke-linecap="round" stroke-opacity=".7"/>
+<path d="M130 548 C250 440 550 440 670 548" fill="none" stroke="#f8f3ed" stroke-opacity=".5" stroke-width="2"/>
+<path d="M400 90 L411 120 L441 130 L411 140 L400 170 L389 140 L359 130 L389 120 Z" fill="#f8f3ed" transform="translate(240 -20) scale(.7)" fill-opacity=".8"/>
+<text x="400" y="1100" text-anchor="middle" fill="#d8c2a8" font-family="Georgia,serif" font-size="30" letter-spacing="12">SEE</text>
+</svg>
